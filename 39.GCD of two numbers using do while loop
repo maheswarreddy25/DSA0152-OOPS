@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdlib> // For abs()
+
+int main() {
+    int a, b;
+    std::cout << "Enter two numbers: ";
+    std::cin >> a >> b;
+
+    a = abs(a);
+    b = abs(b);
+
+    do {
+        int remainder = a % b;
+        a = b;
+        b = remainder;
+    } while (b != 0);
+
+   
+    std::cout << "The GCD is: " << a << std::endl;
+
+    return 0;
+}
